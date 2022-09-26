@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+:root{
+    --BodyFontFamily: 'Barlow Semi Condensed', sans-serif;
+    --BodyFontZise: 13px;
+    --Moderateviolet:          hsl(263, 55%, 52%);
+    --Verydarkgrayishblue:     hsl(217, 19%, 35%);
+    --Verydarkblackishblue:    hsl(219, 29%, 14%);
+    --White:                   hsl(0, 0%, 100%);   
+    --Lightgray:               hsl(0, 0%, 81%);
+    --LightGrayishBlue:        hsl(210, 46%, 95%);
+/* Note for text colors:
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+}
+/* Initial Setup */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--BodyFontFamily);
+}
+body{      
+    background-color: var(--LightGrayishBlue);
+    font-size: var(--BodyFontZise);
+}
+/* mobil first methodology */
+main{
+    width: 325px;
+    margin: 75px auto 50px;  
+}
+.card{
+    border-radius: 10px;
+    padding: 25px 30px 35px;
+    margin-bottom: 25px;
+}
+.card__head{
+    display: flex;
+    gap: 17px;
+    margin-bottom: 20px;
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+img{
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+}
+.name{
+    font-weight: 600;
+}
+.title{
+    opacity: 0.5;
+}
+.card__heading{
+    font-size: 1.55em;
+    margin-bottom: 20px;
+}
+.card__detail{
+    opacity: 0.7;
+    line-height: 17px;
+    font-size: 1.05em;
+}
+.card-1{
+    background-color: var(--Moderateviolet);
+    background-image: url(images/bg-pattern-quotation.svg);    
+    background-repeat: no-repeat;
+    background-position-x: 190px;
+    height: 445px; 
+    color: var(--White);    
+}
+.card-1 .card__heading{
+    font-size: 1.59em;
+}
+.card-2{
+    background-color: var(--Verydarkgrayishblue);    
+    height: 240px;    
+    color: var(--White);
+}
+.card-3{
+    background-color: var(--White);    
+    height: 225px;    
+    color: var(--Verydarkgrayishblue);
+    font-weight: 500;
+}
+.card-4{
+    background-color: var(--Verydarkblackishblue);    
+    height: 385px;   
+    color: var(--White);
+}   
+.card-5{
+    background-color: var(--White);    
+    color: var(--Verydarkgrayishblue);
+    height: 450px;  
+    font-weight: 500;
+}
+/* FrontEnd Mentor Footer */ 
+.attribution{
+    font-size: 11px; text-align: center;
+}
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+/* large Viewports */
+@media screen and (min-width: 1400px){
+    main{
+        width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        grid-gap: 25px;
+    }
+    .card__head{
+        font-size: 1em;
+    }    
+    .card-1{
+        grid-column: 1 / 3;
+        height: 290px;
+        background-position-x: 390px;        
+    }
+    .card-2{
+        grid-column: 3 / 4;
+        height: 290px;        
+    }
+    .card-3{
+        grid-row: 2 / 3;
+        grid-column:  1 / 2;
+        height: 290px;
+        margin-top: -25px;
+    }
+    .card-3 .card__heading{
+        font-size: 1.9em;
+    } 
+    .card-4{
+        grid-row: 2 / 3;
+        grid-column:  2 / 4;
+        height: 290px;
+        margin-top: -25px;
+    }
+    .card-4 .card__heading{
+        font-size: 1.65em;
+    } 
+    .card-4 .card__detail{
+        font-size: 1.16em;
+        font-weight: 100;
+    } 
+    .card-5{
+        grid-row: -1 / 1;
+        grid-column: 4 / 5;
+        height: 605px;
+    }
+    .card-5 .card__heading{
+        font-size: 1.65em;
+    } 
+    .card-5 .card__detail{
+        font-size: 1.18em;
+        line-height: 19px;
+        font-weight: 100;
+    }     
+}
+    
