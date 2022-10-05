@@ -23,7 +23,7 @@ body{
     background-color: var(--LightGrayishBlue);
     font-size: var(--BodyFontZise);
 }
-/* mobil first methodology */
+/* mobile first methodology */
 main{
     width: 325px;
     margin: 75px auto 50px;  
